@@ -51,4 +51,7 @@ INSERT INTO student(name, major) VALUES('Kate', 'Socialogy');
 UPDATE student
 SET major = 'Bio'
 WHERE major = 'Biology'
-
+--updating major whose studnet id is 3
+UPDATE student
+set major = 'Computer Sceince'
+WHERE student_id = 3
