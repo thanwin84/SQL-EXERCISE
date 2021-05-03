@@ -62,3 +62,13 @@ WHERE major = 'Bio' or major = 'Physics'
 --it will affect in all rows since we are not using WHERE
 UPDATE student
 SET major = 'Internet of things'
+--deleting row whose student id is 1
+DELETE FROM student
+WHERE student_id = 1
+--getting all info in student table
+-- *means everything
+SELECT *
+FROM student;
+--getting only name column
+SELECT name
+FROM student 
