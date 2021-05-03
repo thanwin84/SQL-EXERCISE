@@ -79,4 +79,20 @@ ORDER BY name DESC;
 --sorting by name, if name is equal then sort by major
 SELECT student.name, student.major
 FROM student 
-ORDER BY name, major;
+ORDER BY name, major;\
+-- selecting all, then sort by student_id decreasing order
+-- only grab 3 row by setting LIMIT= 3
+SELECT*
+FROM student 
+ORDER BY student_id DESC
+LIMIT 3;
+--filtering only computer science student
+SELECT*
+FROM student 
+WHERE major = 'Computer Science'
+--filtering by two majors 
+SELECT * FROM student 
+WHERE major = 'Computer Science' OR major ='Physics';
+--using NOT to filter 
+SELECT * FROM student 
+WHERE NOT major = 'Computer Science' AND NOT major ='Physics';
