@@ -59,3 +59,6 @@ WHERE student_id = 3
 UPDATE student
 set major = 'BioChemisty'
 WHERE major = 'Bio' or major = 'Physics'
+--it will affect in all rows since we are not using WHERE
+UPDATE student
+SET major = 'Internet of things'
