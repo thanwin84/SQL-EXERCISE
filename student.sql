@@ -71,4 +71,12 @@ SELECT *
 FROM student;
 --getting only name column
 SELECT name
+FROM student;
+--selecting anme and major and sorting them by descending order
+SELECT student.name, student.major
 FROM student 
+ORDER BY name DESC;
+--sorting by name, if name is equal then sort by major
+SELECT student.name, student.major
+FROM student 
+ORDER BY name, major;
