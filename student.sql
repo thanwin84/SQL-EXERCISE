@@ -99,3 +99,6 @@ WHERE NOT major = 'Computer Science' AND NOT major ='Physics';
 --selecting specific name row
 SELECT * FROM student 
 WHERE name IN('claire', 'Kate', 'win');
+
+--we can add another column and setting default value
+ALTER TABLE student ADD nationality VARCHAR(20) DEFAULT('China');
