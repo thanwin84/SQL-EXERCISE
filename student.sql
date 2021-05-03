@@ -20,8 +20,6 @@ DROP TABLE student;
 ALTER TABLE student ADD gpa DECIMAL(5, 2);
 --inserting data into table
 INSERT INTO student VALUES(1, 'Jack', 'Biology');
---another way of inserting data into table
-INSERT INTO student(student_id, name) VALUES(1, 'claire);
  --creating table
 --name cannot be null
 CREATE TABLE student(
@@ -38,3 +36,19 @@ CREATE TABLE student(
     major VARCHAR(20) DEFAULT 'undecided',
     PRIMARY KEY(student_id)
 );
+--creating table
+--we can also use auto increament for primary id
+CREATE TABLE student(
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) DEFAULT 'undecided',
+    PRIMARY KEY(student_id)
+);
+--inserting values into student table
+INSERT INTO student(name, major) VALUES('Jack', 'Biology');
+INSERT INTO student(name, major) VALUES('Kate', 'Socialogy');
+--updating Biology to Bio only in where major is Biology
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology'
+
