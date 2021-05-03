@@ -55,3 +55,7 @@ WHERE major = 'Biology'
 UPDATE student
 set major = 'Computer Sceince'
 WHERE student_id = 3
+--updaing using or operator
+UPDATE student
+set major = 'BioChemisty'
+WHERE major = 'Bio' or major = 'Physics'
